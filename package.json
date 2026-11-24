@@ -1,0 +1,15 @@
+{
+  "name": "recuperatorio_1er_parcial_backend_tapia_dayana",
+  "version": "1.0.0",
+  "description": "",
+  "main": "prueba.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "nodemon recuperatorioServer.js",
+    "dev": "nodemon recuperatorioServer.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

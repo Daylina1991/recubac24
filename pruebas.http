@@ -1,0 +1,13 @@
+###  Obtener todos losusuarios ok
+GET http://127.0.0.1:3008/usuarios
+
+###  Obtener todos losusuarios ok
+GET http://127.0.0.1:3008/
+
+
+
+
+### Probar ingreso de usuario con cuota al día
+GET http://127.0.0.1:3008/usuarios/ingreso/1
+
+
