@@ -1,0 +1,70 @@
+IFTS N° 11 – Tecnicatura Superior en Desarrollo de Software 
+Desarrollo de Sistemas Web – BackEnd 
+Profesores: Zammataro Gustavo, Balbuena Federico 
+Recuperatorio Primer Parcial – Backend – Práctica 
+Consigna: Estamos terminando de desarrollar un sistema para gestión de usuarios y su 
+acceso al establecimiento de un gimnasio. Los requerimientos del cliente fueron: “Queremos 
+que el usuario pueda acceder a las instalaciones del gimnasio, pero antes validar si tiene las 
+cuotas al día.” 
+Preparativos:  - 
+Crear una carpeta con el nombre: 
+“Recuperatorio_1er_Parcial_Backend_Apellido_Nombre”. 
+(Reemplazar apellido y nombre por tu apellido y nombre) - - 
+Luego, dentro de la carpeta, inicializar un nuevo Paquete. Nombrar el paquete con 
+Recuperatorio_1er_Parcial_Backend_Apellido_Nombre (Reemplazar apellido y 
+nombre por tu apellido y nombre) 
+Dentro de la carpeta del proyecto, crear una carpeta que se llame controller, 
+descargar el archivo controller.js del aula virtual y luego copiarlo dentro de esta 
+carpeta, y cambiarle el nombre por “RecuperatorioApellidoController” 
+1) Crear un archivo recuperatorioServer.js, donde implementarán un servidor. 
+a) El servidor debe estar realizado con Express.  
+b) El servidor debe correr en el puerto 3008 (el puerto debe estar dentro de una 
+constante con el nombre RECUPERATORIO_PUERTO) y en localhost, la IP del localhost 
+debe estar definida en una constante con el nombre RECUPERATORIO_HOST. 
+c) Instalar el paquete nodemon como dependencia de desarrollo.  
+d) Cuando se inicializa el servidor, se tiene que visualizar un mensaje en la consola del 
+servidor que diga: “servidor de recuperatorio - localhost: “http://HOST:PUERTO” 
+e) En la ruta inicial (‘/’) se debe visualizar a través del navegador el siguiente mensaje: 
+“Bienvenidos al servidor del Recuperatorio del Primer parcial de - Apellido y Nombre– 
+2) Crear una carpeta que se llame “recursos” dentro de esta carpeta generar un objeto 
+JavaScript que utilizaremos más adelante. 
+Para crear el objeto hay que seguir las siguientes consignas: - Dentro del objeto tiene que haber un array con cinco elementos. - Ponerle un nombre al objeto y al array. - Cada objeto del array debe tener la propiedad id(number), la propiedad nombre(string), la 
+propiedad debeCuota(boolean) y la propiedad cantidad_cuotas_atrasadas(number), junto a 
+2 propiedades más (en total 6 propiedades.) - Exportar el objeto, luego importarlos en el archivo recuperatorioServer.js 
+3) Dentro del controller.js. se encuentra el método validarCuotaAlDia() que recibe un 
+elemento 
+a) Modificar el método validarCuotaAlDia(), para que muestre la cantidad de cuotas 
+atrasadas en el mensaje de error. 
+b) Crear El segundo método habilitarIngreso() que recibe como parámetro una 
+respuesta.  
+c) Dentro del método habilitarIngreso(), implementar un setTimeOut para simular un 
+retraso de 6 segundos. 
+IFTS N° 11 – Tecnicatura Superior en Desarrollo de Software 
+Desarrollo de Sistemas Web – BackEnd 
+Profesores: Zammataro Gustavo, Balbuena Federico 
+d) Recordando el requerimiento, (“Queremos que el usuario pueda acceder a las 
+instalaciones del gimnasio, pero antes validar si tiene las cuotas al día.”)  
+Implementar un mecanismo para que no se invoque la función habilitarIngreso(), 
+hasta que no recibamos la respuesta de validarCuotaAlDia() 
+e) Mover la implementación del punto 3.d a una función y exportarla para poder 
+utilizarla en otro lugar del proyecto. 
+4) En el archivo recuperatorioServer.js realizar 3 (tres) rutas para acceder a los datos del 
+archivo creado en el punto 2. 
+a) Un GET que te traiga todos los objetos del array. 
+b) Un GET que reciba el “debeCuota” por URL PARAM y te traiga los elementos 
+coincidan con el valor pasado, true o false, para traer todos los usuarios que tienen la 
+cuota al día o todos los usuarios que deben cuotas. En caso de que no coincida 
+ninguno, debe informar un error y el código de error http correspondiente. 
+c) Un GET que reciba por URL PARAM, un id del usuario. Este GET debe ejecutar el 
+método realizado en el punto 3.e. 
+5) Crear un archivo que se llame testRecuperatorio. Dentro de este archivo, probar los tres 
+métodos GET del punto 4 con la extensión RestClient de VS Code. 
+Momento! El método validarCuotaAlDia() demora mucho tiempo en responder!, realizar los 
+ajustes necesarios para que responda en un segundo.  
+ENTREGA: Realizar la entrega en el aula virtual, subiendo un archivo comprimido con la 
+carpeta del proyecto. 
+Para que el examen esté aprobado deben funcionar las implementaciones 
+realizadas. 
+NOTA AL PIE: 
+Recordar las buenas prácticas de programación que fuimos viendo en clase! (modularizar, 
+reutilizar funciones, como definir los nombres de los métodos y propiedades. Etc.)
